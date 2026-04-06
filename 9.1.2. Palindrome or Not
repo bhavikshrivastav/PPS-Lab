@@ -1,0 +1,10 @@
+# Read input string
+text = input().strip()
+
+# Check if string is equal to its reverse
+if text == text[::-1]:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+
+
