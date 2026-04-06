@@ -1,0 +1,25 @@
+# Read the range
+start = int(input().strip())
+end = int(input().strip())
+
+# Function to check if a number is prime
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Collect prime numbers
+primes = []
+for number in range(start, end + 1):
+    if is_prime(number):
+        primes.append(number)
+
+# Print results
+if primes:
+    for p in primes:
+        print(p)
+else:
+    print("No primes")
