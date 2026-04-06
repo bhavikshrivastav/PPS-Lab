@@ -1,0 +1,15 @@
+# Read input string
+text = input().strip()
+
+# Define vowels
+vowels = "aeiouAEIOU"
+
+# Count vowels
+count = 0
+for char in text:
+    if char in vowels:
+        count += 1
+
+# Print the total count
+print(count)
+
