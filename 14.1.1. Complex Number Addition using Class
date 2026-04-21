@@ -1,0 +1,36 @@
+class Complex:
+    def __init__(self):
+        self.real = 0
+        self.imaginary = 0
+
+    def initComplex(self):
+        # Read two space-separated numbers from user input
+        data = list(map(int, input().split()))
+        self.real = data[0]
+        self.imaginary = data[1]
+
+    def sum(self, c1, c2):
+        # Add real and imaginary parts of two complex objects
+        self.real = c1.real + c2.real
+        self.imaginary = c1.imaginary + c2.imaginary
+
+    def display(self):
+        # Determine the sign for the imaginary part
+        if self.imaginary >= 0:
+            print(f"{self.real} + {self.imaginary}i")
+        else:
+            # Using abs() because we manually print the minus sign
+            print(f"{self.real} - {abs(self.imaginary)}i")
+
+# Main execution
+if __name__ == "__main__":
+    c1 = Complex()
+    c2 = Complex()
+    result = Complex()
+
+    c1.initComplex()
+    c2.initComplex()
+
+    result.sum(c1, c2)
+    result.display()
+
